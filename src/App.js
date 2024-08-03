@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard";
+
+const AppContainer = styled.div`
+  display: flex;
+  /* height: 100vh; */
+  width: 100vw;
+  max-height: 100vh; /* Full viewport height */
+  /* overflow: hidden; Prevents scrolling */
+  /* flex-wrap: wrap; */
+`;
+
+const MainContent = styled.div`
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #1e1e2f;
+  color: white;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Sidebar />
+      <MainContent>
+        <Header />
+        <Dashboard />
+      </MainContent>
+    </AppContainer>
   );
 }
 
