@@ -9,6 +9,7 @@ const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 200vh;
 `;
 
 const NavItem = styled.div`

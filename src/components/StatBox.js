@@ -1,5 +1,3 @@
-// src/components/StatBox.js
-
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,9 +8,9 @@ const Box = styled.div`
   border-radius: 10px;
   text-align: center;
   flex-grow: 1;
-  margin-right: 10px;
+  margin-right: 20px;
   position: relative;
-  width: ${(props) => (props.large ? "360px" : "160px")};
+  width: ${(props) => (props.large ? "300px" : "65px")};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;

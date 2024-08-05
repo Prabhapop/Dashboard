@@ -1,5 +1,3 @@
-// src/components/Dashboard.js
-
 import React from "react";
 import styled from "styled-components";
 import StatBox from "./StatBox";
@@ -21,33 +19,41 @@ const DashboardContainer = styled.div`
   background-color: #1e1e1e;
   color: white;
   display: flex;
+  flex-direction: column; /* Changed to column to stack elements vertically */
   height: 100vh;
-  width: 100vh;
-  /* max-height: 100vh; Full viewport height */
-  /* overflow: hidden; Prevents scrolling */
-  flex-wrap: wrap;
+  width: 100vw; /* Changed to 100vw to take full viewport width */
   box-sizing: border-box;
-  /* ;overflow: hidden */
+  overflow-y: auto; /* Added to allow vertical scrolling */
 `;
 
 const StatsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Added to wrap stat boxes to next line on smaller screens */
 `;
 
 const MainContent = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 20px;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Added to make main content take available space */
 `;
 
 const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%; /* Added to make left column take full height */
+  width: 100%;
 `;
 
-const RightColumn = styled.div``;
+const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+`;
 
 const Dashboard = () => {
   return (

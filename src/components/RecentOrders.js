@@ -1,5 +1,3 @@
-// src/RecentOrders.js
-
 import React from "react";
 import styled from "styled-components";
 
@@ -44,9 +42,10 @@ const orders = [
 
 const Container = styled.div`
   padding: 20px;
-  background-color: #2b2b2b;
+  background-color: #2c2c38;
   color: white;
   border-radius: 10px;
+  margin-top: 3rem;
 `;
 
 const Table = styled.table`

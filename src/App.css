@@ -1,0 +1,31 @@
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+/* @media (max-width: 768px) {
+    .App {
+      flex-direction: column;
+    }
+  } */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .container {
+    background-color: lightblue;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    background-color: lightgreen;
+  }
+}
+
+/* Laptop/Desktop Styles */
+@media (min-width: 1025px) {
+  .container {
+    background-color: lightcoral;
+  }
+}
