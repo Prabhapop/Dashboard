@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# React Dashboard UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a responsive dashboard UI built with React and styled-components. The dashboard includes several components like statistics cards, an activity chart, recent orders, and customer feedback, designed to be responsive across different devices such as mobile, tablet, and desktop.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone https://github.com/Prabhapop/react-dashboard-ui.git
+cd react-dashboard-ui
 
-### `npm test`
+Install the dependencies:
+bash
+Copy code
+npm install
+Usage
+To run the application locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will start on http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Components
+StatCard
+A component for displaying statistics with an icon, value, and percentage change.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Props:
 
-### `npm run eject`
+title (string): The title of the card.
+value (string): The value to display.
+icon (ReactNode): The icon to display.
+percentage (string): The percentage change.
+increase (boolean): Whether the percentage is an increase or decrease.
+ActivityChart
+A component that renders a bar chart showing activity data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+RecentOrders
+A component that displays a table of recent orders.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feedback
+A component that displays customer feedback with ratings.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Dashboard
+The main dashboard component that integrates all other components.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Folder Structure
+css
+Copy code
+src/
+  ├── components/
+  │   ├── StatCard.js
+  │   ├── ActivityChart.js
+  │   ├── RecentOrders.js
+  │   ├── CustomerFeedback.js
+  |   ├── Header.js
+  |   ├── Sidebar.js
+  |   ├── SidebarMenu.js
+  │   └── Dashboard.js
+  |   
+  |
+  ├── App.js
+  ├── index.js
+  ├── index.css
+Styling
+This project uses styled-components for styling the components. You can customize the styles in the respective component files.
 
-## Learn More
+Contributing
+Contributions are welcome! Please create an issue or pull request if you would like to contribute.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Fork the repository
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a pull request
